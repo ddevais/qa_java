@@ -17,16 +17,7 @@ public AnimalParameterizedTest(String animalKind){
     this.animalKind = animalKind;
 }
 
-    @Test
-    public void getFoodHerbivoreReturnHerbivoreFood() throws Exception {
-        Animal animal = new Animal();
-        List<String> actual = animal.getFood("Травоядное");
-        List<String> expected = List.of("Трава", "Различные растения");
-        assertEquals(actual, expected);
-        System.out.println(actual);
-    }
-
-@Parameterized.Parameters
+    @Parameterized.Parameters
     public static Collection<Object[]> getAnimalKind(){
     return Arrays.asList(new Object[][]{
             {"Травядное"},
